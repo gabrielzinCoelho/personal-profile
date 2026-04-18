@@ -38,7 +38,7 @@ window.PROFILE_DATA = {
     "Dart",
     "React.js",
   ],
-  projects: [
+  experience: [
     {
       title: "Software Developer Intern at CI&T",
       description:

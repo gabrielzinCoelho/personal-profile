@@ -84,9 +84,9 @@ function renderProfile() {
       .join("");
   }
 
-  const projectsList = document.querySelector("[data-profile-projects]");
-  if (projectsList) {
-    projectsList.innerHTML = data.projects
+  const experienceList = document.querySelector("[data-profile-experience]");
+  if (experienceList) {
+    experienceList.innerHTML = data.experience
       .map(
         (project) => `
           <li class="profile-list-item">
