@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Profile | Tailwind</title>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/profile-data.js"></script>
+    <script defer src="js/app.js"></script>
+  </head>
+  <body class="min-h-screen">
+    <header class="mx-auto max-w-6xl px-4 profile-header sm:px-6 lg:px-8">
+      <nav class="profile-navbar card-elevated">
+        <div class="profile-navbar-start">
+          <img
+            class="avatar-navbar"
+            src="assets/eu.jpg"
+            alt="Foto de Gabriel Coelho"
+          />
+          <a class="profile-navbar-brand" href="index.html"
+            >Gabriel Coelho Costa</a
+          >
+        </div>
+        <div class="profile-navbar-links">
+          <a class="profile-nav-link" href="index.html">Inicio</a>
+          <a class="profile-nav-link" href="bootstrap.html">Bootstrap</a>
+          <a class="profile-nav-link active" href="tailwind.html">Tailwind</a>
+        </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Ativar tema escuro"
+          title="Ativar tema escuro"
+        >
+          <img
+            class="theme-toggle-icon"
+            data-theme-icon
+            src="assets/dark-mode.svg"
+            alt=""
+          />
+          <span class="sr-only-custom" data-theme-toggle-label
+            >Ativar tema escuro</span
+          >
+        </button>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
+      <section
+        class="card-elevated rounded-[2rem] p-6 lg:p-10 profile-section-card"
+      >
+        <span class="section-label section-label-floating"
+          >Versão Tailwind</span
+        >
+        <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div>
+            <img
+              class="avatar-profile"
+              src="assets/eu.jpg"
+              alt="Foto de Gabriel Coelho"
+            />
+            <h1 class="profile-name mt-3" data-profile-name></h1>
+            <p class="profile-role mt-3" data-profile-title></p>
+            <p class="profile-body mt-3" data-profile-description></p>
+            <p class="profile-body mt-3" data-profile-about></p>
+            <ul
+              class="profile-tags mt-6 flex flex-wrap gap-2 p-0"
+              data-profile-tags
+            ></ul>
+          </div>
+
+          <aside class="grid gap-4">
+            <div
+              class="rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-5"
+            >
+              <h2 class="profile-section-title">Habilidades</h2>
+              <ul
+                class="mt-3 space-y-2 p-0 profile-skills-scroll"
+                data-profile-skills
+              ></ul>
+            </div>
+            <div
+              class="rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-5"
+            >
+              <h2 class="profile-section-title">Projetos</h2>
+              <ul class="mt-3 space-y-3 p-0" data-profile-projects></ul>
+            </div>
+          </aside>
+        </div>
+
+        <div
+          class="mt-8 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-5"
+        >
+          <h2 class="profile-section-title">Contato</h2>
+          <div class="mt-3 flex flex-col gap-2" data-profile-contacts></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

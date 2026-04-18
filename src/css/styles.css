@@ -1,0 +1,330 @@
+:root {
+  --font-family-base: "Nunito Sans", "Segoe UI", sans-serif;
+  --font-size-main-title: 2.25rem;
+  --font-size-name: 2rem;
+  --font-size-role: 1.1rem;
+  --font-size-section: 1.15rem;
+  --font-size-body: 1rem;
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --text: #16202a;
+  --muted: #5c6773;
+  --primary: #0f766e;
+  --primary-contrast: #ffffff;
+  --border: #dce3ea;
+  --shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f172a;
+  --surface: #111827;
+  --text: #e5eef7;
+  --muted: #94a3b8;
+  --primary: #38bdf8;
+  --primary-contrast: #08111f;
+  --border: #243244;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 30%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+}
+
+.profile-main-title,
+.profile-name,
+.profile-role,
+.profile-body,
+.profile-section-title,
+.profile-navbar-brand,
+.profile-nav-link,
+.profile-list-item,
+.profile-tag-item,
+.profile-contact-link,
+.section-label {
+  font-family: var(--font-family-base);
+}
+
+.profile-main-title {
+  font-size: var(--font-size-main-title);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.profile-name {
+  font-size: var(--font-size-name);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.profile-role {
+  font-size: var(--font-size-role);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.profile-body {
+  font-size: var(--font-size-body);
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.profile-section-title {
+  font-size: var(--font-size-section);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.profile-header {
+  padding-top: 1.25rem;
+}
+
+.profile-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 1rem;
+}
+
+.profile-navbar-start {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.profile-navbar-brand {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.avatar-navbar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid color-mix(in srgb, var(--surface) 72%, var(--primary) 28%);
+}
+
+.avatar-profile {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid color-mix(in srgb, var(--surface) 68%, var(--primary) 32%);
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.profile-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.profile-nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+}
+
+.profile-nav-link:hover,
+.profile-nav-link.active {
+  background: color-mix(in srgb, var(--surface) 84%, var(--primary) 16%);
+  color: var(--text);
+  opacity: 1;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--surface) 15%, #ffffff 85%);
+  background: #1f2937;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  filter: brightness(1.08);
+}
+
+.theme-toggle-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+}
+
+.sr-only-custom {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.card-elevated {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.hero-accent {
+  color: var(--primary);
+}
+
+.text-muted-custom {
+  color: var(--muted);
+}
+
+.btn-primary-custom {
+  background: var(--primary);
+  color: var(--primary-contrast);
+  border: 0;
+}
+
+.btn-primary-custom:hover {
+  filter: brightness(0.95);
+  color: var(--primary-contrast);
+}
+
+.section-label {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.profile-section-card {
+  position: relative;
+}
+
+.section-label-floating {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.profile-list-item {
+  list-style: none;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--surface) 88%, var(--primary) 12%);
+  font-size: var(--font-size-body);
+  color: var(--text);
+}
+
+.profile-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.profile-list-item p {
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+
+.profile-skills-scroll {
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 0.35rem;
+}
+
+.profile-tags {
+  list-style: none;
+}
+
+.profile-tag-item {
+  list-style: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid color-mix(in srgb, var(--surface) 40%, var(--primary) 60%);
+  background: color-mix(in srgb, var(--surface) 82%, var(--primary) 18%);
+  color: var(--text);
+}
+
+.profile-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 90%, var(--primary) 10%);
+}
+
+.profile-contact-link:hover {
+  color: var(--text);
+  opacity: 1;
+  background: color-mix(in srgb, var(--surface) 82%, var(--primary) 18%);
+}
+
+.profile-contact-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: block;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary);
+  opacity: 0.88;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-main-title: 1.85rem;
+    --font-size-name: 1.65rem;
+    --font-size-role: 1rem;
+    --font-size-section: 1.05rem;
+  }
+
+  .profile-navbar {
+    flex-wrap: wrap;
+  }
+
+  .avatar-navbar {
+    width: 2.15rem;
+    height: 2.15rem;
+  }
+
+  .avatar-profile {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .profile-navbar-links {
+    order: 3;
+    width: 100%;
+  }
+}
