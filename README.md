@@ -3,7 +3,8 @@
 ## Sobre o Projeto
 
 - Desenvolver uma página pessoal utilizando HTML, CSS e JavaScript.
-- Aplicar os conceitos estudados na disciplina sobre:
+- Aplicar os conceitos estudados na disciplina.
+- Conceitos trabalhados:
   - Estruturação de páginas.
   - Estilização.
   - Responsividade.
@@ -16,7 +17,8 @@
 - Utilizar HTML, CSS e JavaScript.
 - Garantir que a página esteja totalmente funcional no navegador.
 - Criar um layout responsivo.
-- Disponibilizar duas versões distintas da página:
+- Disponibilizar duas versões distintas da página.
+- Versões da página:
   - Uma versão utilizando Bootstrap.
   - Uma versão utilizando Tailwind CSS.
 - Implementar tema claro e tema escuro.
@@ -24,7 +26,7 @@
 
 ## Como Executar
 
-Arquivo de entrada: `src/index.html`
+Arquivo de entrada: [src/index.html](src/index.html)
 
 Você pode executar de duas formas:
 
